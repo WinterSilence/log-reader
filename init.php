@@ -16,13 +16,11 @@ if ( ! Route::cache())
 			'year'   => '[0-9]+', // '[0-9]'
 			'month'  => '[0-9]+', // '[0-9]'
 			'day'    => '[0-9]+', // '[0-9]{2}'
-			'level'  => '[0-9]+', // '[0-9]{1,3}'
 		))->defaults(array(
 			'controller' => 'Log',
 			'action'     => 'show',
 			'year'       => 0,
 			'month'      => 0,
 			'day'        => 0,
-			'level'      => 0,
 		));
 }
