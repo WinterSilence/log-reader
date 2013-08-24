@@ -11,7 +11,7 @@
 				<ul>
 					<?php foreach($days as $day): ?>
 					<li class="<?php if($param['year'] == $year AND $param['month'] == $month AND $param['day'] == $day) echo 'active' ?>">
-						<?php echo HTML::anchor(Route::url('log', array('year' => $year, 'month' => $month, 'day' => $day)), $day); ?>
+						<?php echo HTML::anchor(Route::url('log', array('year' => $year, 'month' => $month, 'day' => $day)), $day) ?>
 					</li>
 					<?php endforeach; ?>
 				</ul>

@@ -8,19 +8,19 @@
 	</div>
 	<div class="span5">
 		<?php echo Form::open(Request::current()->url(), 
-					array('class' => 'pull-right form-inline', 'method' => 'post','name' => 'mapping-filter')); ?>
+					array('class' => 'pull-right form-inline', 'method' => 'post','name' => 'mapping-filter')) ?>
 			
 			<?php echo Form::label('level', __('Level'), array('class' => 'help-inline')) ?>: &nbsp;
 			<?php echo Form::select('level', Arr::merge(array(0 => __('ALL')), array_combine($log->levels,$log->levels)),
 				$param['level'], array('class' => 'span2')); ?>
 			
-			<?php echo Form::submit('show', _('Show'), array('class' => 'btn btn-info')) ?>
+			<?php echo Form::submit('show', __('Show'), array('class' => 'btn btn-info')) ?>
 			
 			<?php echo HTML::anchor(
 				Route::url('log', array('year' => $year, 'month' => $month, 'day' => $day, 'action' => 'delete')),
 				__('Delete this file'), 
 				array('class' => 'btn btn-danger', 'title' => __('Are you sure to delete?'))) ?>
-
+			
 		<?php echo Form::close() ?>
 	</div>
 </div>
