@@ -25,7 +25,7 @@ abstract class Controller_Base_Log extends Controller_Template
 	public function action_delete()
 	{
 		$this->auto_render = false;
-		$this->log_reader->set_config($this->template->param)->delete();
+		$this->log_reader->set_config($this->template->param)->delete_file();
 		static::redirect($this->request->route->uri(['controller' => 'Base_Log']));
 	}
 	
